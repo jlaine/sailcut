@@ -1,0 +1,60 @@
+include_directories(. ../icons)
+add_compile_definitions(
+    SAILCUT_DATA_PATH="foo"
+    SAILCUT_DOC_PATH="bar"
+    SAILCUT_VERSION="1.5"
+)
+
+add_executable(sailcut
+    geocpp/matrix.cpp
+    geocpp/matrix4x4.cpp
+    geocpp/rect.cpp
+    geocpp/subspace.cpp
+    geocpp/vector.cpp
+    sailcpp/boatdef.cpp
+    sailcpp/hulldef.cpp
+    sailcpp/hullworker.cpp
+    sailcpp/panel.cpp
+    sailcpp/panelgroup.cpp
+    sailcpp/rigdef.cpp
+    sailcpp/rigworker.cpp
+    sailcpp/sailcalc.cpp
+    sailcpp/saildef.cpp
+    sailcpp/sailmould.cpp
+    sailcpp/sailworker.cpp
+    app.cpp
+    boatdef-panel.cpp
+    formboat.cpp
+    formhull.cpp
+    formhulldef.cpp
+    formmain.cpp
+    formmould.cpp
+    formpanelgroup.cpp
+    formprint.cpp
+    formrig.cpp
+    formrigdef.cpp
+    formsail.cpp
+    formsaildef.cpp
+    main.cpp
+    prefs.cpp
+    saildisp.cpp
+    saildispgl.cpp
+    saildisplabel.cpp
+    saildoc.cpp
+    sailpainter.cpp
+    sailprinter.cpp
+    sailtreeitem.cpp
+    sailtreemodel.cpp
+    sailviewer.cpp
+    sailviewer-panel.cpp
+    sailviewer-tabs.cpp
+    sailwriter-carlson.cpp
+    sailwriter-dxf.cpp
+    sailwriter-hand.cpp
+    sailwriter-svg.cpp
+    sailwriter-txt.cpp
+    widgetprofile.cpp
+    widgetprofilevert.cpp
+)
+
+target_link_libraries(sailcut PRIVATE Qt6::Core Qt6::Gui Qt6::OpenGLWidgets Qt6::PrintSupport Qt6::Svg Qt6::Widgets Qt6::Xml)
