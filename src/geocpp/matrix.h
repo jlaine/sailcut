@@ -23,7 +23,7 @@
 #include <cstring>
 #include <stdexcept>
 
-#include <geocpp/vector.h>
+#include "geocpp/vector.h"
 
 enum soltype_t { NONE, ONE, INF };
 

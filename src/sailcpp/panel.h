@@ -20,13 +20,12 @@
 #ifndef PANEL_H
 #define PANEL_H
 
-#include <Qt>
-
 #include <vector>
 #include <string>
 
-#include <geocpp/geocpp.h>
+#include "geocpp/geocpp.h"
 
+enum enumAxis { XAXIS, YAXIS, ZAXIS };
 enum enumPointType { LUFF, FOOT, LEECH, GAFF };
 enum enumDevelopAlign {ALIGN_TOP,ALIGN_BOTTOM };
 
@@ -177,7 +176,7 @@ public:
 
     void placeLabel();   //  place a label at the center of a panel
     void reframe();
-    CPanel rotated(const CPoint3d &, real angle, Qt::Axis axis) const;
+    CPanel rotated(const CPoint3d &, real angle, enumAxis axis) const;
     CPanel transformed(const CMatrix4x4 &m) const;
     CPanel operator+ (const CVector3d &) const;
     CPanel& operator= (const CPanel &);

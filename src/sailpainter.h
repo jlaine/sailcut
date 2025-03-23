@@ -21,7 +21,8 @@
 #define SAILPAINTER_H
 
 #include <QPainter>
-#include <geocpp/geocpp.h>
+
+#include "geocpp/geocpp.h"
 
 class CSide;
 class CPanel;

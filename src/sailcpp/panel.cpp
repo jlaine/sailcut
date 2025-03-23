@@ -312,7 +312,7 @@ CPanel CPanel::develop(enumDevelopAlign align) const
         CC = atan2( (p2.y()-p1.y()) , (p2.x()-p1.x()) );
     }
     // align panel
-    flatpanel = flatpanel.rotated(CPoint3d(0,0,0), -CC, Qt::ZAxis);
+    flatpanel = flatpanel.rotated(CPoint3d(0,0,0), -CC, ZAXIS);
 
     flatpanel.hasHems = false;
 
@@ -722,7 +722,7 @@ void CPanel::add6Hems( const real &lolW, const real &hilW, const real &topW, con
  *  angle = angle in radians
  *  axis = the axis around which to rotate
  */
-CPanel CPanel::rotated(const CPoint3d &p, real angle, Qt::Axis axis) const
+CPanel CPanel::rotated(const CPoint3d &p, real angle, enumAxis axis) const
 {
     CVector3d v;
     v[axis] = 1;

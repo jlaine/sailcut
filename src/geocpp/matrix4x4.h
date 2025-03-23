@@ -20,7 +20,7 @@
 #ifndef GEOCPP_MATRIX4X4_H
 #define GEOCPP_MATRIX4X4_H
 
-#include <geocpp/vector.h>
+#include "geocpp/vector.h"
 
 
 class CMatrix4x4

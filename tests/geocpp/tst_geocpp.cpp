@@ -17,17 +17,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#include <QObject>
-#include <QtTest>
-
-#include <geocpp/geocpp.h>
-
 #include <cstdlib>
 #include <ctime>
 
-#ifdef DEBUG
-#include <mcheck.h>
-#endif
+#include <QObject>
+#include <QtTest>
+
+#include "geocpp/geocpp.h"
+
 
 /** Outputs a CMatrix to a stream.
  */

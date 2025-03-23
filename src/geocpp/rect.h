@@ -20,7 +20,7 @@
 #ifndef GEOCPP_RECT_H
 #define GEOCPP_RECT_H
 
-#include <geocpp/vector.h>
+#include "geocpp/vector.h"
 
 
 /** Three dimensional box.

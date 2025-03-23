@@ -17,11 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#include <geocpp/matrix.h>
-
 #include <climits>
 #include <cmath>
 #include <cstdlib>
+
+#include "geocpp/matrix.h"
 
 /*******************************************************
 

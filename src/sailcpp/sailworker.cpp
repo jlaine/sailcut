@@ -57,7 +57,7 @@ static CPanelGroup prepareDisplaySail(const CPanelGroup &flatsail, real vertical
             real x = dispsail[j-1].top.back().x() - top.x();
             real y = dispsail[j-1].top.back().y() - top.y();
             real CC = atan2(y, x);
-            dispsail[j] = dispsail[j].rotated(bot, CC, Qt::ZAxis);
+            dispsail[j] = dispsail[j].rotated(bot, CC, ZAXIS);
         }
 
         // translation v to align panel bottom edge origin to previous panel upper edge origin
@@ -1317,7 +1317,7 @@ CPanelGroup CSailWorker::LayoutWing( CPanelGroup &flatsail, CPanelGroup &dispsai
         lay[npanel-1] = Zpanel(lay[npanel-1]);
 
         /* Rotate the panel by the dihedral angle */
-        lay[npanel-1] = lay[npanel-1].rotated(tack, alfa, Qt::XAxis);
+        lay[npanel-1] = lay[npanel-1].rotated(tack, alfa, XAXIS);
 
         /* If it is the first panel, then cut the foot to tack level */
         if ( npanel == 1 )

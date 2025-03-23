@@ -19,7 +19,7 @@
 
 #include <cmath>
 
-#include <geocpp/matrix4x4.h>
+#include "geocpp/matrix4x4.h"
 
 
 CMatrix4x4::CMatrix4x4()

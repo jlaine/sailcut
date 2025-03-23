@@ -22,7 +22,8 @@
 
 #include <QWidget>
 #include <QLabel>
-#include <geocpp/geocpp.h>
+
+#include "geocpp/geocpp.h"
 
 class QLabel;
 class QSpinBox;

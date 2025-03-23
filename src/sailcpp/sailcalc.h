@@ -20,7 +20,7 @@
 #ifndef SAILCALC_H
 #define SAILCALC_H
 
-#include <geocpp/geocpp.h>
+#include "geocpp/geocpp.h"
 
 /** @defgroup SailCpp Sail computations library
  *

@@ -20,8 +20,9 @@
 #ifndef SAILMOULD_H
 #define SAILMOULD_H
 
-#include <geocpp/geocpp.h>
 #include <vector>
+
+#include "geocpp/geocpp.h"
 
 /** Class used to work on sail profiles.
  *

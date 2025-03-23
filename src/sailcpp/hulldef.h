@@ -21,7 +21,8 @@
 #define HULLDEF_H
 
 #include <string>
-#include <geocpp/geocpp.h>
+
+#include "geocpp/geocpp.h"
 
 
 /** This class holds the parameters that define a hull
