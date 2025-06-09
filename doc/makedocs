@@ -1,14 +1,17 @@
 #!/bin/sh
+
+set -e
+
 FIGURES="coordinates_system sailplan sail_seams sail_edges develop_panel_drawing head_gores_definition rigplan"
 SRC=`dirname $0`
 DST=$1
 
-for lang in en es fr; do
-    xsltproc -o $DST/$lang/index.html $SRC/sailcut-html.xsl $SRC/$lang/index.docbook
+for lang in en fr; do
     for fig in $FIGURES; do
         fig2dev -L svg $SRC/$lang/$fig.fig $DST/$lang/$fig.svg
         # Strip non-deterministic output to help reproducible builds.
         sed -i -e 's/<!-- \(Creator\|CreationDate\): .* -->//g' $DST/$lang/$fig.svg
     done
+    pandoc --standalone -o $DST/$lang/index.html $SRC/$lang/index.md
 done
 cp $SRC/sailcut-handbook.css $DST/sailcut-handbook.css
