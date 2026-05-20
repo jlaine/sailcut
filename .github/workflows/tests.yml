@@ -15,7 +15,7 @@ jobs:
           - os: windows-latest
             arch: win64_mingw
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: jurplel/install-qt-action@v4
         with:
           arch: ${{ matrix.arch }}
@@ -37,7 +37,7 @@ jobs:
         run: make package
       - name: Upload package
         if: matrix.os != 'ubuntu-latest'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: dist-${{ matrix.os }}
           path: sailcut-*
