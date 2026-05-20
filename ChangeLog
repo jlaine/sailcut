@@ -1,3 +1,6 @@
+Sailcut CAD 1.5.2
+ * improved - Increase luff length limit for balanced lug sails.
+
 Sailcut CAD 1.5.1
  * improved - Install desktop files for Linux distributions.
  * improved - Strip non-deterministic output from xfig-generated SVG.
