@@ -11,9 +11,15 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
+            shell: bash
           - os: macos-latest
+            shell: bash
           - os: windows-latest
             arch: win64_mingw
+            shell: msys2 {0}
+    defaults:
+      run:
+        shell: ${{ matrix.shell }}
     steps:
       - uses: actions/checkout@v6
       - uses: jurplel/install-qt-action@v4
@@ -28,10 +34,8 @@ jobs:
         run: |
           qmake
           make
-        shell: bash
       - name: Test
         run: make check --keep-going
-        shell: bash
       - name: Build package
         if: matrix.os != 'ubuntu-latest'
         run: make package
